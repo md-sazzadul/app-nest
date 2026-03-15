@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router";
+import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Apps from "../pages/Apps";
 import Home from "../pages/Home";
@@ -9,11 +10,15 @@ const AppRouter = () => {
     <BrowserRouter>
       <Header />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/apps" element={<Apps />} />
-        <Route path="/installation" element={<Installation />} />
-      </Routes>
+      <main className="min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/apps" element={<Apps />} />
+          <Route path="/installation" element={<Installation />} />
+        </Routes>
+      </main>
+
+      <Footer />
     </BrowserRouter>
   );
 };
