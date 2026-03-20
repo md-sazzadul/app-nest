@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import AppInfo from "../components/appDetails/AppInfo";
+import RatingChart from "../components/appDetails/RatingChart";
 import NoData from "../components/apps/NoData";
 
 const AppDetails = () => {
@@ -25,6 +26,8 @@ const AppDetails = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10">
       <AppInfo app={app} />
+
+      <RatingChart ratings={app.ratings} />
     </div>
   );
 };
