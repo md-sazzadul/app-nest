@@ -5,6 +5,7 @@ import AppDetails from "../pages/AppDetails";
 import Apps from "../pages/Apps";
 import Home from "../pages/Home";
 import Installation from "../pages/Installation";
+import NotFound from "../pages/NotFound";
 
 const AppRouter = () => {
   return (
@@ -17,6 +18,8 @@ const AppRouter = () => {
           <Route path="/apps" element={<Apps />} />
           <Route path="/apps/:id" element={<AppDetails />} />
           <Route path="/installation" element={<Installation />} />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
