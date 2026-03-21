@@ -1,13 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import downloadIcon from "../../assets/icon-downloads.png";
 import ratingIcon from "../../assets/icon-ratings.png";
 import reviewIcon from "../../assets/icon-review.png";
+import { installApp, isAppInstalled } from "../../utils/localStorage";
 
 const AppInfo = ({ app }) => {
   const [installed, setInstalled] = useState(false);
 
+  useEffect(() => {
+    if (isAppInstalled(app.id)) {
+      setInstalled(true);
+    }
+  }, [app.id]);
+
   const handleInstall = () => {
+    installApp(app);
     setInstalled(true);
     toast.success("App installed successfully 🎉");
   };
