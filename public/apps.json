@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Notion_app_logo.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
     "title": "Notion: Notes & Workspace",
     "companyName": "Notion Labs",
-    "description": "All-in-one workspace for notes, databases, tasks and collaboration.",
+    "description": "Notion is an all-in-one productivity platform designed to help individuals and teams organize their work and ideas in a single place. It combines note-taking, task management, databases, and collaboration tools into a flexible workspace. Users can create structured pages, manage projects using kanban boards or tables, and collaborate in real-time with teammates. Notion is widely used for personal planning, team documentation, knowledge bases, and even website publishing. Its customizable interface allows users to build workflows tailored to their needs, making it one of the most versatile productivity tools available today.",
     "size": 80,
     "reviews": 156000,
     "ratingAvg": 4.8,
@@ -19,10 +19,10 @@
   },
   {
     "id": 2,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Trello-logo-blue.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Trello_logo.png",
     "title": "Trello: Project Management",
     "companyName": "Atlassian",
-    "description": "Organize projects with boards, lists, and cards.",
+    "description": "Trello is a visual project management tool that helps users organize tasks and workflows using boards, lists, and cards. It is based on the kanban system, allowing teams to track progress easily by moving tasks across different stages. Trello supports collaboration by enabling users to assign tasks, set deadlines, attach files, and communicate within cards. It integrates with many third-party tools such as Slack, Google Drive, and Jira, making it highly adaptable for various workflows. Whether managing personal tasks or large team projects, Trello provides a simple yet powerful way to stay organized and productive.",
     "size": 65,
     "reviews": 89000,
     "ratingAvg": 4.7,
@@ -40,7 +40,7 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png",
     "title": "Gmail: Email Client",
     "companyName": "Google",
-    "description": "Secure email service with powerful search and spam protection.",
+    "description": "Gmail is a widely used email service developed by Google that offers a clean interface, powerful search capabilities, and robust spam filtering. It allows users to send and receive emails, organize messages with labels, and categorize inbox content automatically. Gmail integrates seamlessly with other Google services such as Google Drive, Google Meet, and Google Calendar, enhancing productivity and communication. It also provides strong security features, including two-factor authentication and phishing protection. With its reliability, speed, and cross-device accessibility, Gmail has become one of the most trusted email platforms globally.",
     "size": 90,
     "reviews": 230000,
     "ratingAvg": 4.6,
@@ -55,10 +55,10 @@
   },
   {
     "id": 4,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Spotify_logo_without_text.svg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg",
     "title": "Spotify: Music Streaming",
     "companyName": "Spotify Ltd.",
-    "description": "Listen to millions of songs, podcasts and playlists worldwide.",
+    "description": "Spotify is a leading music streaming platform that provides access to millions of songs, albums, and podcasts from artists around the world. Users can create playlists, discover new music through personalized recommendations, and follow their favorite artists. Spotify offers both free and premium subscription options, with premium users enjoying ad-free listening, offline downloads, and higher audio quality. The platform uses advanced algorithms to curate playlists based on user preferences, making music discovery easy and enjoyable. It is available across multiple devices, including smartphones, tablets, desktops, and smart speakers.",
     "size": 75,
     "reviews": 180000,
     "ratingAvg": 4.7,
@@ -71,12 +71,13 @@
       { "name": "5 star", "count": 121800 }
     ]
   },
+
   {
     "id": 5,
     "image": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png",
     "title": "LinkedIn: Professional Network",
     "companyName": "LinkedIn",
-    "description": "Build your professional network and find career opportunities.",
+    "description": "LinkedIn is a professional networking platform that helps individuals connect with colleagues, discover job opportunities, and build their careers. Users can create profiles showcasing their experience, skills, and achievements, making it easier for recruiters to find them. The platform offers job listings, company insights, and networking opportunities through posts, groups, and messaging. LinkedIn also provides learning resources through LinkedIn Learning, allowing users to improve their skills. It is widely used by professionals, students, and businesses to expand their networks and stay updated on industry trends.",
     "size": 70,
     "reviews": 120000,
     "ratingAvg": 4.5,
@@ -89,12 +90,13 @@
       { "name": "5 star", "count": 65700 }
     ]
   },
+
   {
     "id": 6,
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png",
     "title": "Instagram: Social Media",
     "companyName": "Meta",
-    "description": "Share photos and videos and connect with friends around the world.",
+    "description": "Instagram is a popular social media platform that allows users to share photos, videos, and stories with their followers. It offers features such as reels, live streaming, and direct messaging, making it a comprehensive social networking app. Users can explore content from creators worldwide through hashtags, explore pages, and algorithm-based recommendations. Instagram is widely used by individuals, influencers, and businesses for personal expression, marketing, and brand building.",
     "size": 85,
     "reviews": 450000,
     "ratingAvg": 4.6,
@@ -107,12 +109,13 @@
       { "name": "5 star", "count": 296800 }
     ]
   },
+
   {
     "id": 7,
     "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
     "title": "WhatsApp Messenger",
     "companyName": "Meta",
-    "description": "Free messaging and calling app used by billions of people.",
+    "description": "WhatsApp is a widely used messaging application that allows users to send text messages, voice notes, images, videos, and documents. It also supports voice and video calls, making it a complete communication tool. WhatsApp uses end-to-end encryption to ensure user privacy and security.",
     "size": 65,
     "reviews": 680000,
     "ratingAvg": 4.7,
@@ -125,12 +128,13 @@
       { "name": "5 star", "count": 449000 }
     ]
   },
+
   {
     "id": 8,
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
     "title": "Telegram Messenger",
     "companyName": "Telegram FZ LLC",
-    "description": "Fast, secure and cloud-based messaging application.",
+    "description": "Telegram is a fast, secure, and cloud-based messaging app that offers a wide range of features beyond basic communication, including large group chats, channels, bots, and enhanced privacy options.",
     "size": 55,
     "reviews": 240000,
     "ratingAvg": 4.6,
@@ -143,12 +147,13 @@
       { "name": "5 star", "count": 151200 }
     ]
   },
+
   {
     "id": 9,
     "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
     "title": "Netflix: Movies & TV Shows",
     "companyName": "Netflix Inc.",
-    "description": "Stream thousands of movies, TV series and documentaries.",
+    "description": "Netflix is a leading streaming service that offers a vast library of movies, TV shows, documentaries, and original content, accessible anytime on multiple devices.",
     "size": 95,
     "reviews": 210000,
     "ratingAvg": 4.6,
@@ -161,12 +166,13 @@
       { "name": "5 star", "count": 129200 }
     ]
   },
+
   {
     "id": 10,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Google_Maps_icon_%282020%29.svg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Google_maps_logo.png",
     "title": "Google Maps: Navigation",
     "companyName": "Google",
-    "description": "Navigate and explore the world with real-time GPS navigation.",
+    "description": "Google Maps is a comprehensive navigation service providing real-time directions, traffic updates, and location discovery with accurate mapping data worldwide.",
     "size": 120,
     "reviews": 520000,
     "ratingAvg": 4.7,
@@ -179,12 +185,13 @@
       { "name": "5 star", "count": 312000 }
     ]
   },
+
   {
     "id": 11,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/7/75/Zoom_Communications_Logo.svg",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/24/Zoom-Logo.png",
     "title": "Zoom: Video Meetings",
     "companyName": "Zoom",
-    "description": "HD video meetings and webinars for remote communication.",
+    "description": "Zoom is a video conferencing platform that enables remote meetings, webinars, and collaboration with high-quality video and screen sharing features.",
     "size": 75,
     "reviews": 134000,
     "ratingAvg": 4.5,
@@ -197,12 +204,13 @@
       { "name": "5 star", "count": 81500 }
     ]
   },
+
   {
     "id": 12,
-    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3f/YouTube_icon_%282013-2017%29.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg",
     "title": "YouTube: Video Streaming",
     "companyName": "Google",
-    "description": "Watch, upload and share videos from creators worldwide.",
+    "description": "YouTube is the largest video-sharing platform, offering content from creators worldwide, including tutorials, entertainment, and live streams.",
     "size": 110,
     "reviews": 980000,
     "ratingAvg": 4.7,
@@ -213,6 +221,151 @@
       { "name": "3 star", "count": 34000 },
       { "name": "4 star", "count": 280000 },
       { "name": "5 star", "count": 639000 }
+    ]
+  },
+
+  {
+    "id": 13,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png",
+    "title": "Slack: Team Communication",
+    "companyName": "Slack Technologies",
+    "description": "Slack is a powerful communication platform designed for teams to collaborate efficiently in real time. It offers organized channels for conversations, direct messaging, and seamless integration with tools like Google Drive, Zoom, and GitHub. Slack supports file sharing, voice and video calls, and automation through bots and workflows. It is widely used by companies to streamline communication, reduce email clutter, and enhance productivity across distributed teams.",
+    "size": 85,
+    "reviews": 98000,
+    "ratingAvg": 4.6,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 2100 },
+      { "name": "2 star", "count": 1600 },
+      { "name": "3 star", "count": 5200 },
+      { "name": "4 star", "count": 31000 },
+      { "name": "5 star", "count": 58100 }
+    ]
+  },
+  {
+    "id": 14,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Dropbox_logo15.png",
+    "title": "Dropbox: Cloud Storage",
+    "companyName": "Dropbox Inc.",
+    "description": "Dropbox is a cloud storage service that allows users to store, sync, and share files securely across multiple devices. It enables easy collaboration by allowing teams to share folders and work on files together in real time. Dropbox also includes features like file recovery, version history, and integration with tools like Microsoft Office and Slack. It is widely used by individuals and businesses for secure data storage and seamless file access.",
+    "size": 70,
+    "reviews": 87000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 2400 },
+      { "name": "2 star", "count": 1800 },
+      { "name": "3 star", "count": 6100 },
+      { "name": "4 star", "count": 29000 },
+      { "name": "5 star", "count": 47700 }
+    ]
+  },
+  {
+    "id": 15,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/Microsoft_Teams.png",
+    "title": "Microsoft Teams",
+    "companyName": "Microsoft",
+    "description": "Microsoft Teams is a collaboration platform that combines chat, video meetings, file storage, and app integration into a single workspace. It is part of the Microsoft 365 ecosystem and integrates seamlessly with tools like Word, Excel, and Outlook. Teams supports large meetings, webinars, and real-time document collaboration, making it ideal for businesses, schools, and remote teams. Its robust security and enterprise-level features make it a popular choice for organizations worldwide.",
+    "size": 95,
+    "reviews": 150000,
+    "ratingAvg": 4.4,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 5200 },
+      { "name": "2 star", "count": 3100 },
+      { "name": "3 star", "count": 9200 },
+      { "name": "4 star", "count": 54000 },
+      { "name": "5 star", "count": 78400 }
+    ]
+  },
+  {
+    "id": 16,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg",
+    "title": "Figma: Design Tool",
+    "companyName": "Figma Inc.",
+    "description": "Figma is a cloud-based design and prototyping tool used by designers and developers to create user interfaces and collaborate in real time. It allows multiple users to work on the same design file simultaneously, making it highly efficient for team projects. Figma supports vector editing, prototyping, and design systems, along with plugins that extend its functionality. It is widely used in UI/UX design and product development workflows.",
+    "size": 60,
+    "reviews": 64000,
+    "ratingAvg": 4.7,
+    "downloads": 500000000,
+    "ratings": [
+      { "name": "1 star", "count": 1200 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 3100 },
+      { "name": "4 star", "count": 21000 },
+      { "name": "5 star", "count": 37800 }
+    ]
+  },
+  {
+    "id": 17,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Canva_logo.svg",
+    "title": "Canva: Graphic Design",
+    "companyName": "Canva",
+    "description": "Canva is a user-friendly graphic design platform that allows users to create professional-quality visuals, presentations, social media posts, and more. It provides a wide range of templates, fonts, images, and design elements that make it easy for beginners and professionals alike. Canva also supports team collaboration and brand kits, making it ideal for businesses and content creators. Its drag-and-drop interface simplifies the design process significantly.",
+    "size": 75,
+    "reviews": 210000,
+    "ratingAvg": 4.8,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 1800 },
+      { "name": "2 star", "count": 1400 },
+      { "name": "3 star", "count": 5200 },
+      { "name": "4 star", "count": 64000 },
+      { "name": "5 star", "count": 137600 }
+    ]
+  },
+  {
+    "id": 18,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png",
+    "title": "Google Drive: Cloud Storage",
+    "companyName": "Google",
+    "description": "Google Drive is a cloud storage service that allows users to store files online and access them from any device. It integrates with Google Docs, Sheets, and Slides, enabling real-time collaboration and document editing. Users can share files with others, set permissions, and keep their data securely backed up. Google Drive is widely used for both personal and professional purposes due to its reliability and ease of use.",
+    "size": 85,
+    "reviews": 320000,
+    "ratingAvg": 4.7,
+    "downloads": 5000000000,
+    "ratings": [
+      { "name": "1 star", "count": 6200 },
+      { "name": "2 star", "count": 4100 },
+      { "name": "3 star", "count": 13200 },
+      { "name": "4 star", "count": 110000 },
+      { "name": "5 star", "count": 186500 }
+    ]
+  },
+  {
+    "id": 19,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png",
+    "title": "PayPal: Online Payments",
+    "companyName": "PayPal Inc.",
+    "description": "PayPal is a secure online payment platform that allows users to send and receive money, shop online, and manage transactions easily. It supports international payments and provides buyer protection for secure transactions. Businesses can use PayPal for invoicing and payment processing. With its strong security features and global reach, PayPal is one of the most trusted digital payment systems.",
+    "size": 70,
+    "reviews": 275000,
+    "ratingAvg": 4.5,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 7200 },
+      { "name": "2 star", "count": 5200 },
+      { "name": "3 star", "count": 14200 },
+      { "name": "4 star", "count": 89000 },
+      { "name": "5 star", "count": 159400 }
+    ]
+  },
+  {
+    "id": 20,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png",
+    "title": "X (Twitter): Social Network",
+    "companyName": "X Corp.",
+    "description": "X, formerly known as Twitter, is a social networking platform where users share short posts, news, and updates in real time. It is widely used for public discussions, trending topics, and direct communication with audiences. Users can follow others, engage with posts, and share multimedia content. X plays a major role in global communication, news distribution, and social interaction.",
+    "size": 80,
+    "reviews": 400000,
+    "ratingAvg": 4.3,
+    "downloads": 1000000000,
+    "ratings": [
+      { "name": "1 star", "count": 12000 },
+      { "name": "2 star", "count": 9000 },
+      { "name": "3 star", "count": 21000 },
+      { "name": "4 star", "count": 130000 },
+      { "name": "5 star", "count": 228000 }
     ]
   }
 ]
