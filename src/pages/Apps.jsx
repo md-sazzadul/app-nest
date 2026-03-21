@@ -20,10 +20,10 @@ const Apps = () => {
   );
 
   return (
-    <div className="p-10 text-center">
+    <div>
       <AppsHeader />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10">
+      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-10">
         {/* Toolbar */}
         <AppsToolbar
           total={filteredApps.length}
@@ -35,7 +35,7 @@ const Apps = () => {
         {filteredApps.length === 0 ? (
           <NoData />
         ) : (
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {filteredApps.map((app) => (
               <AppCard key={app.id} app={app} />
             ))}
