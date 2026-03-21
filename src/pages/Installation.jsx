@@ -4,9 +4,48 @@ import { getInstalledApps, uninstallApp } from "../utils/localStorage";
 
 const Installation = () => {
   const [apps, setApps] = useState([]);
+  const [sortOrder, setSortOrder] = useState("");
 
   useEffect(() => {
     setApps(getInstalledApps());
+  }, []);
+
+  const parseDownloads = (downloads) => {
+    if (!downloads) return 0;
+
+    if (downloads.includes("M")) {
+      return parseFloat(downloads) * 1_000_000;
+    }
+    if (downloads.includes("K")) {
+      return parseFloat(downloads) * 1_000;
+    }
+
+    return parseFloat(downloads);
+  };
+
+  const handleSort = (order) => {
+    setSortOrder(order);
+
+    const sortedApps = [...apps].sort((a, b) => {
+      const aDownloads = parseDownloads(a.downloads);
+      const bDownloads = parseDownloads(b.downloads);
+
+      return order === "high-low"
+        ? bDownloads - aDownloads
+        : aDownloads - bDownloads;
+    });
+
+    setApps(sortedApps);
+  };
+
+  useEffect(() => {
+    const storedApps = getInstalledApps();
+
+    if (sortOrder) {
+      handleSort(sortOrder);
+    } else {
+      setApps(storedApps);
+    }
   }, []);
 
   const handleUninstall = (id, name) => {
@@ -29,8 +68,19 @@ const Installation = () => {
         Explore All Trending Apps on the Market developed by us
       </p>
 
-      {/* Count */}
-      <p className="mb-4 font-semibold">{apps.length} Apps Found</p>
+      <div className="flex justify-between items-center mb-4">
+        <p className="font-semibold">{apps.length} Apps Found</p>
+
+        <select
+          value={sortOrder}
+          onChange={(e) => handleSort(e.target.value)}
+          className="border px-3 py-2 rounded"
+        >
+          <option value="">Sort By Downloads</option>
+          <option value="high-low">High → Low</option>
+          <option value="low-high">Low → High</option>
+        </select>
+      </div>
 
       {/* List */}
       <div className="space-y-4">
