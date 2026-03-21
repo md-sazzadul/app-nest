@@ -11,7 +11,6 @@ const Header = () => {
   return (
     <header className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-14 flex items-center relative">
-        {/* LEFT — Logo */}
         <div className="flex-1 flex items-center">
           <NavLink to="/" className="flex items-center gap-1.5">
             <img
@@ -25,7 +24,6 @@ const Header = () => {
           </NavLink>
         </div>
 
-        {/* CENTER — Nav links, absolutely centered */}
         <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           <NavLink to="/" className={navLinkClass} end>
             Home
@@ -38,7 +36,6 @@ const Header = () => {
           </NavLink>
         </nav>
 
-        {/* RIGHT — Contribute button */}
         <div className="flex-1 flex justify-end">
           <a
             href="https://github.com/md-sazzadul"
