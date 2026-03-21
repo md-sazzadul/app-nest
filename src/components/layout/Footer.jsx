@@ -8,7 +8,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#06283D] text-white relative overflow-hidden">
-      {/* Decorative gradient blobs */}
       <div
         className="absolute top-0 left-0 w-72 h-72 rounded-full opacity-10 pointer-events-none"
         style={{
@@ -24,7 +23,6 @@ const Footer = () => {
         }}
       />
 
-      {/* CTA Banner */}
       <div className="border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
@@ -49,10 +47,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Main Footer Grid */}
       <div className="max-w-6xl mx-auto px-6 lg:px-12 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          {/* Brand Column */}
           <div className="md:col-span-1 flex flex-col gap-4">
             <Link to="/" className="flex items-center gap-2 w-fit">
               <img src={logo} alt="Hero.io" className="h-9 w-auto" />
@@ -62,7 +58,6 @@ const Footer = () => {
               Crafting innovative apps that make everyday life simpler, smarter,
               and more exciting.
             </p>
-            {/* Social Icons */}
             <div className="flex gap-3 mt-1">
               {[
                 {
@@ -100,7 +95,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Products */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-widest text-purple-300 mb-4">
               Products
@@ -125,7 +119,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-widest text-purple-300 mb-4">
               Company
@@ -150,7 +143,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-widest text-purple-300 mb-4">
               Stay Updated
@@ -177,7 +169,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
           <span>© {currentYear} HERO.IO — All rights reserved.</span>

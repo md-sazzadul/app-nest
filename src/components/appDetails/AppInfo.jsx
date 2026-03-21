@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import downloadIcon from "../../assets/icon-downloads.png";
 import ratingIcon from "../../assets/icon-ratings.png";
@@ -6,13 +6,7 @@ import reviewIcon from "../../assets/icon-review.png";
 import { installApp, isAppInstalled } from "../../utils/localStorage";
 
 const AppInfo = ({ app }) => {
-  const [installed, setInstalled] = useState(false);
-
-  useEffect(() => {
-    if (isAppInstalled(app.id)) {
-      setInstalled(true);
-    }
-  }, [app.id]);
+  const [installed, setInstalled] = useState(() => isAppInstalled(app.id));
 
   const handleInstall = () => {
     installApp(app);
@@ -23,7 +17,6 @@ const AppInfo = ({ app }) => {
   return (
     <div className="border border-gray-200 p-6 rounded-lg bg-white">
       <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-        {/* App Image */}
         <div className="w-40 h-40 bg-gray-100 rounded-2xl flex items-center justify-center shadow-sm shrink-0">
           <img
             src={app.image}
@@ -32,7 +25,6 @@ const AppInfo = ({ app }) => {
           />
         </div>
 
-        {/* Details */}
         <div className="flex-1">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
             {app.title}
@@ -47,9 +39,7 @@ const AppInfo = ({ app }) => {
 
           <div className="border-t border-gray-200 my-4" />
 
-          {/* Stats Section */}
           <div className="flex flex-wrap gap-10">
-            {/* Downloads */}
             <div className="flex items-center gap-3">
               <img src={downloadIcon} alt="downloads" className="w-6 h-6" />
               <div>
@@ -60,7 +50,6 @@ const AppInfo = ({ app }) => {
               </div>
             </div>
 
-            {/* Ratings */}
             <div className="flex items-center gap-3">
               <img src={ratingIcon} alt="ratings" className="w-6 h-6" />
               <div>
@@ -71,7 +60,6 @@ const AppInfo = ({ app }) => {
               </div>
             </div>
 
-            {/* Reviews */}
             <div className="flex items-center gap-3">
               <img src={reviewIcon} alt="reviews" className="w-6 h-6" />
               <div>
@@ -83,7 +71,6 @@ const AppInfo = ({ app }) => {
             </div>
           </div>
 
-          {/* Install Button */}
           <button
             onClick={handleInstall}
             disabled={installed}

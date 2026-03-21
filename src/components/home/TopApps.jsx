@@ -9,7 +9,6 @@ const TopApps = () => {
   return (
     <section className="py-14 bg-base-200">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Trending Apps
@@ -19,14 +18,12 @@ const TopApps = () => {
           </p>
         </div>
 
-        {/* Apps Grid — 4 columns, 2 rows */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {topApps.map((app) => (
             <AppCard key={app.id} app={app} />
           ))}
         </div>
 
-        {/* Show All Button */}
         <div className="flex justify-center mt-10">
           <Link
             to="/apps"

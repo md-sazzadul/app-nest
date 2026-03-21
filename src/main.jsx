@@ -9,7 +9,6 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
 
-    {/* Toast Container (GLOBAL) */}
     <ToastContainer
       position="top-right"
       autoClose={2500}

@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { toast } from "react-toastify";
 import { getInstalledApps, uninstallApp } from "../utils/localStorage";
 
 const Installation = () => {
-  const [apps, setApps] = useState([]);
+  const [apps, setApps] = useState(() => getInstalledApps());
   const [sortOrder, setSortOrder] = useState("");
-
-  useEffect(() => {
-    setApps(getInstalledApps());
-  }, []);
 
   const handleSort = (order) => {
     setSortOrder(order);
@@ -48,16 +44,13 @@ const Installation = () => {
         </div>
       </section>
 
-      {/* Content */}
       <div className="bg-base-200 min-h-screen">
         <div className="max-w-5xl mx-auto px-6 lg:px-8 py-10">
-          {/* Toolbar */}
           <div className="flex justify-between items-center mb-6">
             <p className="font-semibold text-slate-700">
               {apps.length} Apps Found
             </p>
 
-            {/* Sort Dropdown */}
             <div className="relative">
               <select
                 value={sortOrder}
@@ -85,7 +78,6 @@ const Installation = () => {
             </div>
           </div>
 
-          {/* App List */}
           <div className="flex flex-col gap-4">
             {apps.length === 0 ? (
               <div className="bg-white border border-gray-200 rounded-xl text-center py-16 px-6">
@@ -103,9 +95,7 @@ const Installation = () => {
                   key={app.id}
                   className="flex items-center justify-between bg-white border border-gray-200 rounded-xl px-5 py-4 hover:shadow-md transition-shadow duration-200"
                 >
-                  {/* Left: Icon + Info */}
                   <div className="flex items-center gap-4">
-                    {/* App Icon */}
                     <div className="w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
                       {app.image ? (
                         <img
@@ -121,13 +111,11 @@ const Installation = () => {
                       )}
                     </div>
 
-                    {/* Text */}
                     <div>
                       <h3 className="font-semibold text-gray-900 text-sm md:text-base leading-snug">
                         {app.title}
                       </h3>
                       <div className="flex items-center gap-3 mt-1.5 text-xs md:text-sm">
-                        {/* Downloads */}
                         <span className="flex items-center gap-1 text-indigo-500 font-semibold">
                           <svg
                             width="12"
@@ -141,7 +129,6 @@ const Installation = () => {
                           {formatDownloads(app.downloads)}
                         </span>
 
-                        {/* Rating */}
                         <span className="flex items-center gap-1 text-orange-400 font-semibold">
                           <svg
                             width="12"
@@ -154,7 +141,6 @@ const Installation = () => {
                           {app.ratingAvg ?? app.rating ?? "N/A"}
                         </span>
 
-                        {/* Size */}
                         <span className="text-gray-400 font-medium">
                           {app.size} MB
                         </span>
@@ -162,7 +148,6 @@ const Installation = () => {
                     </div>
                   </div>
 
-                  {/* Right: Uninstall Button */}
                   <button
                     onClick={() => handleUninstall(app.id, app.title)}
                     className="shrink-0 bg-green-500 hover:bg-green-600 active:scale-95 text-white text-sm font-semibold px-5 py-2 rounded-lg transition-all duration-150"

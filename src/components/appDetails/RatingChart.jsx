@@ -8,7 +8,6 @@ import {
 } from "recharts";
 
 const RatingChart = ({ ratings }) => {
-  // Reverse so 5 star is on top
   const chartData = [...ratings].reverse().map((item) => ({
     name: item.name,
     count: item.count,

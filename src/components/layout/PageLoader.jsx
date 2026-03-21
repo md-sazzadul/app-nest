@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigation } from "react-router";
 
 const PageLoader = () => {
@@ -8,41 +8,58 @@ const PageLoader = () => {
   const [progress, setProgress] = useState(0);
   const [visible, setVisible] = useState(false);
 
+  const wasNavigatingRef = useRef(false);
+
   useEffect(() => {
-    let interval;
+    const wasNavigating = wasNavigatingRef.current;
+    wasNavigatingRef.current = isNavigating;
 
-    if (isNavigating) {
-      setVisible(true);
-      setProgress(0);
+    if (isNavigating && !wasNavigating) {
+      const startTimer = setTimeout(() => {
+        setVisible(true);
+        setProgress(0);
+      }, 0);
 
-      // Animate progress bar quickly to ~85%, then hold
-      interval = setInterval(() => {
-        setProgress((prev) => {
-          if (prev < 85) return prev + Math.random() * 12;
-          return prev;
-        });
-      }, 120);
-    } else {
-      // Complete the bar then fade out
-      setProgress(100);
-      const timeout = setTimeout(() => {
+      return () => clearTimeout(startTimer);
+    }
+
+    if (!isNavigating && wasNavigating) {
+      const finishTimer = setTimeout(() => {
+        setProgress(100);
+      }, 0);
+
+      const hideTimer = setTimeout(() => {
         setVisible(false);
         setProgress(0);
       }, 400);
-      return () => clearTimeout(timeout);
+
+      return () => {
+        clearTimeout(finishTimer);
+        clearTimeout(hideTimer);
+      };
     }
+  }, [isNavigating]);
+
+  useEffect(() => {
+    if (!isNavigating || !visible) return;
+
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev < 85) return prev + Math.random() * 12;
+        return prev;
+      });
+    }, 120);
 
     return () => clearInterval(interval);
-  }, [isNavigating]);
+  }, [isNavigating, visible]);
 
   if (!visible) return null;
 
   return (
     <>
-      {/* Top progress bar */}
       <div className="fixed top-0 left-0 right-0 z-50 h-0.5 bg-transparent">
         <div
-          className="h-full transition-all duration-200 ease-out"
+          className="h-full"
           style={{
             width: `${Math.min(progress, 100)}%`,
             background: "linear-gradient(90deg, #632EE3, #9F62F2)",
@@ -53,11 +70,9 @@ const PageLoader = () => {
         />
       </div>
 
-      {/* Full-page overlay with spinner — only shown when actually loading */}
       {isNavigating && (
         <div className="fixed inset-0 z-40 bg-base-200/60 backdrop-blur-[1px] flex items-center justify-center">
           <div className="bg-white rounded-2xl shadow-lg px-8 py-6 flex flex-col items-center gap-3 border border-gray-100">
-            {/* Spinning ring */}
             <div className="relative w-10 h-10">
               <div className="absolute inset-0 rounded-full border-4 border-gray-100" />
               <div

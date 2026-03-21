@@ -4,7 +4,6 @@ const Banner = () => {
   return (
     <section className="bg-base-200 pt-16 pb-0 overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center">
-        {/* Heading */}
         <h1 className="text-5xl md:text-6xl font-extrabold text-slate-800 leading-tight">
           We Build
         </h1>
@@ -18,16 +17,13 @@ const Banner = () => {
           <span className="text-slate-800">Apps</span>
         </h1>
 
-        {/* Description */}
         <p className="mt-5 max-w-2xl mx-auto text-gray-500 text-base leading-relaxed">
           At HERO.IO, we craft innovative apps designed to make everyday life
           simpler, smarter, and more exciting. Our goal is to turn your ideas
           into digital experiences that truly make an impact.
         </p>
 
-        {/* Buttons */}
         <div className="flex justify-center gap-4 mt-7 flex-wrap">
-          {/* Google Play */}
           <a
             href="https://play.google.com/store"
             target="_blank"
@@ -42,7 +38,6 @@ const Banner = () => {
             Google Play
           </a>
 
-          {/* App Store */}
           <a
             href="https://www.apple.com/app-store/"
             target="_blank"
@@ -58,7 +53,6 @@ const Banner = () => {
           </a>
         </div>
 
-        {/* Hero Image */}
         <div className="mt-16 flex justify-center">
           <img
             src={heroImage}
