@@ -1,18 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useLoaderData } from "react-router";
 import AppsHeader from "../components/apps/AppsHeader";
 import AppsToolbar from "../components/apps/AppsToolbar";
 import NoData from "../components/apps/NoData";
 import AppCard from "../components/home/AppCard";
 
 const Apps = () => {
-  const [apps, setApps] = useState([]);
+  const apps = useLoaderData();
   const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    fetch("/apps.json")
-      .then((res) => res.json())
-      .then((data) => setApps(data));
-  }, []);
 
   // Filter Logic (case-insensitive)
   const filteredApps = apps.filter((app) =>

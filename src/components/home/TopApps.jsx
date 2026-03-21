@@ -1,15 +1,10 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import AppCard from "./AppCard";
 
 const TopApps = () => {
-  const [apps, setApps] = useState([]);
+  const apps = useLoaderData();
 
-  useEffect(() => {
-    fetch("/apps.json")
-      .then((res) => res.json())
-      .then((data) => setApps(data.slice(0, 8)));
-  }, []);
+  const topApps = apps.slice(0, 8);
 
   return (
     <section className="py-14 bg-base-200">
@@ -26,7 +21,7 @@ const TopApps = () => {
 
         {/* Apps Grid — 4 columns, 2 rows */}
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
-          {apps.map((app) => (
+          {topApps.map((app) => (
             <AppCard key={app.id} app={app} />
           ))}
         </div>
