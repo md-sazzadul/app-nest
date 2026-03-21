@@ -19,3 +19,9 @@ export const installApp = (app) => {
   apps.push(app);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(apps));
 };
+
+export const uninstallApp = (appId) => {
+  const apps = getInstalledApps();
+  const updatedApps = apps.filter((app) => app.id !== appId);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedApps));
+};
