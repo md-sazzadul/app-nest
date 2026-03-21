@@ -22,7 +22,7 @@ const NotFound = () => {
       {/* Button */}
       <button
         onClick={() => navigate(-1)}
-        className="btn btn-primary mt-6 px-6"
+        className="inline-flex items-center gap-2 bg-linear-to-r from-[#632EE3] to-[#9F62F2] hover:bg-primary/90 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors mt-5"
       >
         Go Back!
       </button>

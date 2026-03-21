@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-sm">
-      <div className="max-w-screen-xl mx-auto px-6 lg:px-12 h-14 flex items-center relative">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 h-14 flex items-center relative">
         {/* LEFT — Logo */}
         <div className="flex-1 flex items-center">
           <NavLink to="/" className="flex items-center gap-1.5">
