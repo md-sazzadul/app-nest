@@ -35,7 +35,7 @@ const Banner = () => {
             className="flex items-center gap-2 px-5 py-2.5 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 transition text-sm font-medium text-gray-700 shadow-sm"
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_Play_2022_icon.svg"
               alt="Google Play"
               className="h-5 w-auto"
             />
