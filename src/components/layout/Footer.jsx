@@ -8,29 +8,31 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#06283D] text-white relative overflow-hidden">
+      {/* Background glows */}
       <div
-        className="absolute top-0 left-0 w-72 h-72 rounded-full opacity-10 pointer-events-none"
+        className="absolute top-0 left-0 w-48 sm:w-72 h-48 sm:h-72 rounded-full opacity-10 pointer-events-none"
         style={{
           background: "radial-gradient(circle, #632EE3, transparent)",
           transform: "translate(-40%, -40%)",
         }}
       />
       <div
-        className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none"
+        className="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 rounded-full opacity-10 pointer-events-none"
         style={{
           background: "radial-gradient(circle, #9F62F2, transparent)",
           transform: "translate(40%, 40%)",
         }}
       />
 
+      {/* CTA strip */}
       <div className="border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h3 className="text-2xl font-bold flex items-center gap-2">
-              <MdOutlineRocketLaunch className="text-purple-400" size={28} />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-10 flex flex-col md:flex-row items-center justify-between gap-5">
+          <div className="text-center md:text-left">
+            <h3 className="text-lg sm:text-2xl font-bold flex items-center justify-center md:justify-start gap-2">
+              <MdOutlineRocketLaunch className="text-purple-400" size={24} />
               Ready to build something amazing?
             </h3>
-            <p className="text-gray-400 mt-1 text-sm">
+            <p className="text-gray-400 mt-1 text-xs sm:text-sm">
               Join millions of users who trust HERO.IO for their productivity
               needs.
             </p>
@@ -39,7 +41,7 @@ const Footer = () => {
             href="https://play.google.com/store"
             target="_blank"
             rel="noreferrer"
-            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white transition-all duration-200 hover:scale-105 active:scale-95"
+            className="shrink-0 inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm font-semibold text-white transition-all duration-200 hover:scale-105 active:scale-95"
             style={{ background: "linear-gradient(135deg, #632EE3, #9F62F2)" }}
           >
             Get Started Free
@@ -47,36 +49,40 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div className="md:col-span-1 flex flex-col gap-4">
+      {/* Main footer grid */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 py-10 sm:py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10">
+          {/* Brand */}
+          <div className="col-span-2 sm:col-span-2 md:col-span-1 flex flex-col gap-4">
             <Link to="/" className="flex items-center gap-2 w-fit">
-              <img src={logo} alt="Hero.io" className="h-9 w-auto" />
-              <span className="text-lg font-bold tracking-wide">HERO.IO</span>
+              <img src={logo} alt="Hero.io" className="h-8 sm:h-9 w-auto" />
+              <span className="text-base sm:text-lg font-bold tracking-wide">
+                HERO.IO
+              </span>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
               Crafting innovative apps that make everyday life simpler, smarter,
               and more exciting.
             </p>
-            <div className="flex gap-3 mt-1">
+            <div className="flex gap-2 sm:gap-3 mt-1">
               {[
                 {
-                  icon: <FaTwitter size={15} />,
+                  icon: <FaTwitter size={14} />,
                   href: "https://twitter.com",
                   label: "Twitter",
                 },
                 {
-                  icon: <FaLinkedin size={15} />,
+                  icon: <FaLinkedin size={14} />,
                   href: "https://linkedin.com",
                   label: "LinkedIn",
                 },
                 {
-                  icon: <FaGithub size={15} />,
+                  icon: <FaGithub size={14} />,
                   href: "https://github.com",
                   label: "GitHub",
                 },
                 {
-                  icon: <FaDiscord size={15} />,
+                  icon: <FaDiscord size={14} />,
                   href: "https://discord.com",
                   label: "Discord",
                 },
@@ -87,7 +93,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="w-8 h-8 rounded-lg bg-white/10 hover:bg-purple-600 flex items-center justify-center transition-colors duration-200"
+                  className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/10 hover:bg-purple-600 flex items-center justify-center transition-colors duration-200"
                 >
                   {icon}
                 </a>
@@ -95,11 +101,12 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Products */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-purple-300 mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-purple-300 mb-3 sm:mb-4">
               Products
             </h4>
-            <ul className="space-y-2.5 text-sm text-gray-400">
+            <ul className="space-y-2 text-xs sm:text-sm text-gray-400">
               {[
                 "Trending Apps",
                 "New Releases",
@@ -119,11 +126,12 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Company */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-purple-300 mb-4">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-purple-300 mb-3 sm:mb-4">
               Company
             </h4>
-            <ul className="space-y-2.5 text-sm text-gray-400">
+            <ul className="space-y-2 text-xs sm:text-sm text-gray-400">
               {[
                 { label: "About Us", to: "/" },
                 { label: "Careers", to: "/" },
@@ -143,21 +151,22 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-widest text-purple-300 mb-4">
+          {/* Newsletter */}
+          <div className="col-span-2 sm:col-span-2 md:col-span-1">
+            <h4 className="text-xs font-semibold uppercase tracking-widest text-purple-300 mb-3 sm:mb-4">
               Stay Updated
             </h4>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-400 text-xs sm:text-sm mb-3 sm:mb-4">
               Get the latest app releases and news delivered to your inbox.
             </p>
             <div className="flex flex-col gap-2">
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="w-full px-4 py-2.5 rounded-lg bg-white/10 border border-white/10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
+                className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg bg-white/10 border border-white/10 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 transition-colors"
               />
               <button
-                className="w-full py-2.5 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-95"
+                className="w-full py-2 sm:py-2.5 rounded-lg text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-95"
                 style={{
                   background: "linear-gradient(135deg, #632EE3, #9F62F2)",
                 }}
@@ -169,10 +178,11 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-6 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 py-4 sm:py-5 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 text-xs text-gray-500 text-center sm:text-left">
           <span>© {currentYear} HERO.IO — All rights reserved.</span>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-5">
             {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
               (item) => (
                 <a

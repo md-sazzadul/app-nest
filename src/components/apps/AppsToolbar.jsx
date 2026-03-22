@@ -2,16 +2,16 @@ import { FiSearch } from "react-icons/fi";
 
 const AppsToolbar = ({ total, search, setSearch }) => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
-      <h3 className="text-base font-medium text-slate-700">
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+      <h3 className="text-sm sm:text-base font-medium text-slate-700">
         ({total}) Apps Found
       </h3>
 
-      <div className="w-full md:w-72 flex items-center border border-gray-300 rounded-lg bg-white px-3 gap-2 focus-within:border-gray-400 transition-colors">
+      <div className="w-full sm:w-72 flex items-center border border-gray-300 rounded-lg bg-white px-3 gap-2 focus-within:border-gray-400 transition-colors">
         <FiSearch size={16} className="text-gray-400 shrink-0" />
         <input
           type="text"
-          placeholder="search Apps"
+          placeholder="Search Apps"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="flex-1 py-2 text-sm outline-none bg-transparent text-gray-700 placeholder-gray-400"

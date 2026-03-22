@@ -11,7 +11,6 @@ const Apps = () => {
   const [search, setSearch] = useState("");
 
   const debouncedSearch = useDebounce(search, 350);
-
   const isSearching = search !== debouncedSearch;
 
   const displayedApps = useMemo(() => {
@@ -25,7 +24,7 @@ const Apps = () => {
     <div>
       <AppsHeader />
 
-      <div className="max-w-5xl mx-auto px-6 lg:px-8 py-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
         <AppsToolbar
           total={displayedApps.length}
           search={search}
@@ -37,7 +36,7 @@ const Apps = () => {
         ) : displayedApps.length === 0 ? (
           <NoData />
         ) : (
-          <div className="grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid gap-3 sm:gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {displayedApps.map((app) => (
               <AppCard key={app.id} app={app} />
             ))}
@@ -49,7 +48,7 @@ const Apps = () => {
 };
 
 const SearchSkeleton = () => (
-  <div className="grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+  <div className="grid gap-3 sm:gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     {Array.from({ length: 8 }).map((_, i) => (
       <div
         key={i}
